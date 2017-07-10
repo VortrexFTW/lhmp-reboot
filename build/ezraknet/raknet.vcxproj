@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C1E5E8A9-1C9B-3292-8A89-53708BAA2062}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>raknet</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">raknet.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">raknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">raknet.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">raknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">raknet.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">raknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">raknet.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">raknet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot -BC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build --check-stamp-file C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot -BC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build --check-stamp-file C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot -BC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build --check-stamp-file C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot -BC:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build --check-stamp-file C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet/CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Base64Encoder.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\BitStream.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CCRakNetSlidingWindow.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CCRakNetUDT.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CheckSum.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CloudClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CloudCommon.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CloudServer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\CommandParserInterface.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ConnectionGraph2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ConsoleServer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DR_SHA1.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DS_BytePool.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DS_ByteQueue.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DS_HuffmanEncodingTree.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DS_Table.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DataCompressor.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DirectoryDeltaTransfer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\DynDNS.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\EmailSender.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\EpochTimeToString.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\FileList.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\FileListTransfer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\FileOperations.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\FormatString.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\FullyConnectedMesh2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\GetTime.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Getche.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Gets.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\GridSectorizer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\HTTPConnection.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\HTTPConnection2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\IncrementalReadInterface.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Itoa.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\LinuxStrings.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\LocklessTypes.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\LogCommandParser.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\MessageFilter.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NatPunchthroughClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NatPunchthroughServer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NatTypeDetectionClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NatTypeDetectionCommon.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NatTypeDetectionServer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NetworkIDManager.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\NetworkIDObject.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PS4Includes.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PacketConsoleLogger.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PacketFileLogger.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PacketLogger.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PacketOutputWindowLogger.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PacketizedTCP.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\PluginInterface2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RPC4Plugin.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Rackspace.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakMemoryOverride.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetCommandParser.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_360_720.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_Berkley.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_Berkley_NativeClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_NativeClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_PS3_PS4.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_PS4.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_Vita.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_WindowsStore8.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_Windows_Linux.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetSocket2_Windows_Linux_360.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetStatistics.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetTransport2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakNetTypes.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakPeer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakSleep.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakString.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakThread.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RakWString.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Rand.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RandSync.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ReadyEvent.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\RelayPlugin.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ReliabilityLayer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ReplicaManager3.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\Router2.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SecureHandshake.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SendToThread.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SignaledEvent.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SimpleMutex.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SocketLayer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\StatisticsHistory.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\StringCompressor.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\StringTable.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\SuperFastHash.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TCPInterface.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TableSerializer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TeamBalancer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TeamManager.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TelnetTransport.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\ThreadsafePacketLogger.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\TwoWayAuthentication.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\UDPForwarder.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\UDPProxyClient.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\UDPProxyCoordinator.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\UDPProxyServer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\VariableDeltaSerializer.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\VariableListDeltaTracker.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\VariadicSQLParser.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\VitaIncludes.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\WSAStartupSingleton.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\_FindFirst.cpp"  />
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\ezraknet\src\gettimeofday.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ZERO_CHECK.vcxproj">
+      <Project>{64AD7087-9C56-3267-85C5-943CA3F45ADE}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

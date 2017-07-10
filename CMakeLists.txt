@@ -1,9 +1,12 @@
+#	Lost Heaven Multiplayer - Reboot Edition
+
 cmake_minimum_required(VERSION 2.6)
 
-project(LHMP)
+project(lhmp)
 
+#	Build RakNet (use raknet as library name, not ezraknet)
+add_subdirectory(ezraknet)
 
-#add_subdirectory(shared)
 add_subdirectory(client)
 #add_subdirectory(server)
 #add_subdirectory(installer)

@@ -29,6 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/cmake_install.cmake")
   include("C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/client/cmake_install.cmake")
 
 endif()

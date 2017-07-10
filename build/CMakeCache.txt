@@ -94,7 +94,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=LHMP
+CMAKE_PROJECT_NAME:STATIC=lhmp
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=rc
@@ -165,20 +165,23 @@ LHMP_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build
 //Value Computed by CMake
 LHMP_SOURCE_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot
 
-//The directory containing a CMake configuration file for ezraknet.
-ezraknet_DIR:PATH=ezraknet_DIR-NOTFOUND
+//Value Computed by CMake
+ezraknet_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet
+
+//Value Computed by CMake
+ezraknet_SOURCE_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/ezraknet
+
+//Value Computed by CMake
+lhmp_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build
+
+//Value Computed by CMake
+lhmp_SOURCE_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot
+
+//Dependencies for the target
+lhmp_client_LIB_DEPENDS:STATIC=general;raknet;
 
 //Dependencies for target
-lhmp_client_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-lhmp_server_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-lhmp_shared_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-server_LIB_DEPENDS:STATIC=
+raknet_LIB_DEPENDS:STATIC=
 
 
 ########################
@@ -259,7 +262,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER

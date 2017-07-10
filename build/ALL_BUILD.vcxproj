@@ -168,6 +168,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{C68D95A2-91D3-388A-8FEE-B17DB325C0A4}</Project>
       <Name>lhmp_client</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\build\ezraknet\raknet.vcxproj">
+      <Project>{C1E5E8A9-1C9B-3292-8A89-53708BAA2062}</Project>
+      <Name>raknet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

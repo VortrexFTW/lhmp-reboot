@@ -4,7 +4,7 @@
 #define	__PED_H
 #include "CEntity.h"
 #include "../../shared/include/structures.h"
-#include <d3d8.h>
+#include "../../vendor/directx/d3d8.h"
 class CPed: public CEntity
 {
 private:
