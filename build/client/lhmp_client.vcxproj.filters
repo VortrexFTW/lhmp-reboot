@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\AntiCheat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CChat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CColoredText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CCrashHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CEngineStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CFileTransfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CGame - kópia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CGameSync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CGraphics - Copy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CGraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CHooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CIngameMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CInterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CKeyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CLocalPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CNametags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPedPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPickup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPickupPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPlayerSync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CSQFonts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CSQImages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CSquirrel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CVehicle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\CVehiclePool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\PerikiyoXD\Desktop\lostheaven\lhmp-reboot\client\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DE03CD63-771E-3F18-BFD1-6EB87B7C7737}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+[submodule "ezraknet"]
+	path = ezraknet
+	url = https://github.com/PerikiyoXD/ezraknet.git
