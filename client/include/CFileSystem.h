@@ -103,7 +103,7 @@ public:
 
 	void	Delete()
 	{
-		int len = this->nextList.size();
+		size_t len = this->nextList.size();
 		for (int i = 0; i < len; i++)
 		{
 			this->nextList[i]->GetNext()->Delete();
@@ -127,7 +127,7 @@ public:
 		char test[255];
 		strcpy(test, genuieName);
 
-		int len = strlen(test);
+		size_t len = strlen(test);
 		for (int i = 0; i < len; i++)
 		{
 			if (test[i] >= 'A' && test[i] <= 'Z')
@@ -145,7 +145,7 @@ public:
 		char test[255];
 		strcpy(test, file);
 
-		int len = strlen(test);
+		size_t len = strlen(test);
 		for (int i = 0; i < len; i++)
 		{
 			if (test[i] >= 'A' && test[i] <= 'Z')

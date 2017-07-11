@@ -1,22 +1,12 @@
 if(WIN32)
-	file(GLOB_RECURSE LHMP_CLIENT_SOURCES "src/*.cpp")
-
-	add_library(lhmp_client SHARED 
-		"${LHMP_CLIENT_SOURCES}"
-	)
-
-	include_directories(SYSTEM
-		"${CMAKE_SOURCE_DIR}/vendor/directx/include"
-	)
-
-	target_link_libraries(lhmp_client
-		raknet
-		"${CMAKE_SOURCE_DIR}/vendor/directx/lib/x86/d3d8.lib"
-	)
-
-	target_include_directories(lhmp_client
-		PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-	)
+	if(MSVC)
+		add_definitions( "-D_CRT_SECURE_NO_WARNINGS" )
+	endif()
+	file( GLOB_RECURSE LHMP_CLIENT_SOURCES "src/*.cpp" )
+	add_library( lhmp_client SHARED "${LHMP_CLIENT_SOURCES}" )
+	include_directories( SYSTEM "${CMAKE_SOURCE_DIR}/vendor/directx/include" )
+	target_link_libraries( lhmp_client raknet "${CMAKE_SOURCE_DIR}/vendor/directx/lib/x86/d3d8.lib" )
+	target_include_directories( lhmp_client PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include" )
 else()
-	message(STATUS "Client can't be build outside Windows environment."
+	message( STATUS "Client can't be build outside Windows environment." )	
 endif()

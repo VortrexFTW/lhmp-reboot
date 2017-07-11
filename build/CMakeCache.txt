@@ -73,7 +73,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/LHMP
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/lhmp
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.10.25017/bin/HostX86/x64/link.exe
@@ -133,10 +133,10 @@ CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //If set, runtime paths are not added when installing shared libraries,
 // but are added when building.
-CMAKE_SKIP_INSTALL_RPATH:BOOL=OFF
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 
 //If set, runtime paths are not added when using shared libraries.
-CMAKE_SKIP_RPATH:BOOL=OFF
+CMAKE_SKIP_RPATH:BOOL=NO
 
 //Flags used by the linker during the creation of static libraries.
 CMAKE_STATIC_LINKER_FLAGS:STRING=/machine:x64
@@ -157,13 +157,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
-CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
-
-//Value Computed by CMake
-LHMP_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build
-
-//Value Computed by CMake
-LHMP_SOURCE_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
 ezraknet_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet
@@ -178,7 +172,7 @@ lhmp_BINARY_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build
 lhmp_SOURCE_DIR:STATIC=C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot
 
 //Dependencies for the target
-lhmp_client_LIB_DEPENDS:STATIC=general;raknet;
+lhmp_client_LIB_DEPENDS:STATIC=general;raknet;general;C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/vendor/directx/lib/x86/d3d8.lib;
 
 //Dependencies for target
 raknet_LIB_DEPENDS:STATIC=

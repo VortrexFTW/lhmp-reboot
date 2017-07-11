@@ -22,7 +22,7 @@ struct CColoredStruct
 		color = _color;
 		width =_width;
 		// copy the text
-		unsigned int len = strlen(_text);
+		size_t len = strlen(_text);
 		text = new char[len+1];
 		strcpy(text, _text);
 		text[len] = '\0';
