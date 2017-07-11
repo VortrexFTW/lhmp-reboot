@@ -1,6 +1,0 @@
-[submodule "vendor/ezraknet"]
-	path = vendor/ezraknet
-	url = https://github.com/PerikiyoXD/ezraknet.git
-[submodule "vendor/squirrel"]
-	path = vendor/squirrel
-	url = https://github.com/albertodemichelis/squirrel.git

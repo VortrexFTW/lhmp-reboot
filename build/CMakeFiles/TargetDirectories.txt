@@ -1,5 +1,0 @@
-C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/raknet.dir
-C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/ezraknet/CMakeFiles/ALL_BUILD.dir
-C:/Users/PerikiyoXD/Desktop/lostheaven/lhmp-reboot/build/client/CMakeFiles/lhmp_client.dir
