@@ -1,6 +1,6 @@
 // (C) LHMP Team 2013-2016; Licensed under Apache 2; See LICENSE;;
 
-#include "d3d8.h"
+#include "../../dx8sdk/include/d3d8.h"
 #include "CDirect3DDevice8Proxy.h"
 
 class CDirect3D8Proxy: public IDirect3D8
@@ -91,7 +91,7 @@ public:
 
 		if(result == D3D_OK)
 		{
-			*ppReturnedDeviceInterface = new CDirect3DDevice8Proxy ( *ppReturnedDeviceInterface );
+			*ppReturnedDeviceInterface = new CDirect3DDevice8Proxy(*ppReturnedDeviceInterface);
 			g_CCore->GetGraphics()->hwnAppWindow = pPresentationParameters->hDeviceWindow;
 		}
 		return result;

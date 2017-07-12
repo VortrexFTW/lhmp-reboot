@@ -39,6 +39,30 @@ void CLog::AddLog(char* str, unsigned char priority)
 		}
 	}
 }
+void CLog::AddLog(std::string message, unsigned char priority)
+{
+	// if message has enough priority 
+	if (priority <= this->logState)
+	{
+		// append log message into logfile
+		std::fstream logFile;
+		logFile.open("lhmp/log.txt", std::ios::app);
+		if (logFile.is_open())
+		{
+			logFile << message << std::endl;
+			logFile.close();
+		}
+		// if isDebug, print message in chat
+		if (this->isDebug == 1)
+		{
+			std::string debugMessage;
+			debugMessage += "#aaaaaa";
+			debugMessage += message;
+			g_CCore->GetChat()->AddMessage(debugMessage);
+		}
+	}
+}
+
 
 void  CLog::SetLogState(unsigned char state)
 {

@@ -3,7 +3,7 @@
 #ifndef _CSQUIRREL_FONTS_H
 #define _CSQUIRREL_FONTS_H
 
-#include "d3dx8.h"
+#include "../../dx8sdk/include/d3dx8.h"
 #include "CFont.h"
 
 #define MAX_FONTS 100

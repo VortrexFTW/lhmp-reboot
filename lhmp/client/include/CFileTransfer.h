@@ -3,8 +3,8 @@
 #ifndef __FILETRANSFER_H
 #define __FILETRANSFER_H
 #include <vector>
-#include "../../vendor/md5/md5.h"
-#include "BitStream.h"
+#include "../../md5/md5.h"
+#include "../../RakNet/BitStream.h"
 
 
 enum FILETRANSFER_STATE

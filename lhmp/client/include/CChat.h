@@ -3,9 +3,9 @@
 #pragma once
 #ifndef __CHAT_H
 #define __CHAT_H
-	#include <Windows.h>
-	#include <d3d8.h>
-	#include <d3dx8.h>
+    #include <Windows.h>
+    #include "../../dx8sdk/include/d3d8.h"
+	#include "../../dx8sdk/include/d3dx8.h"
 	#include <iostream>
 	#include <stdio.h>
 	#include "string.h"

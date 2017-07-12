@@ -3,6 +3,7 @@
 #include "CCore.h"
 #include "CGame.h"
 
+#include <string>
 
 #define VC_EXTRALEAN
 #define WIN32_LEAN_AND_MEAN
@@ -255,7 +256,6 @@ void CGame::Camera_lock(DWORD address)
 }
 void CGame::ChangeSkin(DWORD playerObject,int skinId)
 {
-
 	// if pedestrian is not a NULL-object
 	if (playerObject)
 	{
@@ -263,9 +263,12 @@ void CGame::ChangeSkin(DWORD playerObject,int skinId)
 		if (character->object.frame)
 		{
 			
-			char buff[500];
-			sprintf(buff, "CGame::ChangeSkin %u %d", character, skinId);
-			g_CCore->GetLog()->AddLog(buff);
+			std::string logMessage;
+			logMessage += "CGame::ChangeSkin ";
+			logMessage += std::to_string((intptr_t)character);
+			logMessage += std::to_string(skinId);
+
+			g_CCore->GetLog()->AddLog(logMessage);
 
 			skinId = Tools::Clamp(skinId, 0, (int)(sizeof(SKINS) / 200));
 			//char * actualModel = (char*)(*(DWORD*)(*(DWORD*)(playerObject + 0x68) + 0x154) + 0x0);

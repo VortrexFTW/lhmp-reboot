@@ -6,8 +6,8 @@
 #define VC_EXTRALEAN
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
-#include <d3d8.h>
-#include <detours.h>
+#include <../../dx8sdk/include/d3d8.h>
+#include <../../detours/include/detours.h>
 
 typedef IDirect3D8* (__stdcall *Direct3DCreate8_t)(UINT SDKVersion);
 typedef HRESULT		(APIENTRY *EndScene_t)(IDirect3DDevice8*);

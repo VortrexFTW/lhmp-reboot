@@ -5,12 +5,12 @@
 #include "../../shared/include/structures.h"
 #include "../../shared/include/CBitArray.h"
 #include "CCore.h"
-#include "RakNetTime.h"
+#include "../../RakNet/RakNetTime.h"
 #include <fstream>
-#include "TCPInterface.h"
+#include "../../RakNet/TCPInterface.h"
 #include "../../shared/include/version.h"
 
-#include "FileListTransfer.h"
+#include "../../RakNet/FileListTransfer.h"
 #include "CFileTransfer.h"
 	  
 extern CCore *g_CCore;

@@ -6,7 +6,7 @@
 #include "CNetwork.h"
 #include <fstream>
 #include "CCore.h"
-#include "GetTime.h"
+#include "../../RakNet/GetTime.h"
 
 extern CCore *g_CCore;
 CLocalPlayer::CLocalPlayer()

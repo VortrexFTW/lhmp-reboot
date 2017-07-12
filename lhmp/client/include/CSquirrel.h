@@ -5,15 +5,15 @@
 
 #include <stdarg.h>
 #include <stdio.h>
-#include <squirrel.h>
-#include <sqstdio.h>
-#include <sqstdaux.h>
+#include "../../SQUIRREL3/include/squirrel.h"
+#include "../../SQUIRREL3/include/sqstdio.h"
+#include "../../SQUIRREL3/include/sqstdaux.h"
 #include <iostream>
 #include <vector>
 
-#include <sqstdstring.h>
-#include <sqstdmath.h>
-#include <sqstdsystem.h>
+#include "../../SQUIRREL3/include/sqstdstring.h"
+#include "../../SQUIRREL3/include/sqstdmath.h"
+#include "../../SQUIRREL3/include/sqstdsystem.h"
 
 /*#ifdef SQUNICODE
 #define scvprintf vwprintf

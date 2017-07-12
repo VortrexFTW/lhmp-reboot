@@ -2,6 +2,9 @@
 
 #include "CPickupPool.h"
 #include "CCore.h"
+#include <intrin.h>  
+
+#pragma intrinsic(_ReturnAddress) 
 
 extern CCore *g_CCore;
 CPickupPool::CPickupPool()

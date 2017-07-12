@@ -7,7 +7,7 @@
 #include "Windows.h"
 #include <tchar.h>
 #include <psapi.h>
-#include <detours.h>
+#include <../../detours/include/detours.h>
 
 extern CCore* g_CCore;
 

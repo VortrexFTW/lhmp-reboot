@@ -3,10 +3,10 @@
 #ifndef __CGRAPHIC_H
 #define __CGRAPHIC_H
 
-#include "../../vendor/direct3dfont/d3dfont.h"
+#include "../../cd3dfont/d3dfont.h"
 #include "CFont.h"
 #include "Windows.h"
-#include "d3dx8.h"
+#include "../../dx8sdk/include/d3dx8.h"
 
 #include "CColoredText.h"
 

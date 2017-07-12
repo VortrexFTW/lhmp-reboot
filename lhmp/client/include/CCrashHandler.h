@@ -3,12 +3,12 @@
 #ifndef __CCRASH_HANDLER
 #define __CCRASH_HANDLER
 
-#include "RakPeerInterface.h"
-#include "MessageIdentifiers.h"
-#include "BitStream.h"
-#include "RakNetTypes.h"
-#include "RakSleep.h"
-#include "TCPInterface.h"
+#include "../../RakNet/RakPeerInterface.h"
+#include "../../RakNet/MessageIdentifiers.h"
+#include "../../RakNet/BitStream.h"
+#include "../../RakNet/RakNetTypes.h"
+#include "../../RakNet/RakSleep.h"
+#include "../../RakNet/TCPInterface.h"
 #include <mutex>
 using namespace RakNet;
 class CCrashHandler

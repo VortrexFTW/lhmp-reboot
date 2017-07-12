@@ -3,8 +3,8 @@
 #ifndef __CINGAMEMENU_H
 #define __CINGAMEMENU_H
 
-#include <d3d8.h>
-#include <d3dx8.h>
+#include "../../dx8sdk/include/d3d8.h"
+#include "../../dx8sdk/include/d3dx8.h"
 class CIngameMenu
 {
 private:

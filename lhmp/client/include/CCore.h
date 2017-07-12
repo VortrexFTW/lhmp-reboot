@@ -8,7 +8,7 @@
 #include "CNetwork.h"
 #include "CLocalPlayer.h"
 
-#include <d3d8.h>				
+#include "../../dx8sdk/include/d3d8.h"				
 #include "CChat.h"
 #include "CGame.h"
 #include "CGraphics.h"

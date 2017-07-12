@@ -2,7 +2,7 @@
 
 #ifndef _CSQUIRREL_IMAGES_H
 #define _CSQUIRREL_IMAGES_H
-#include "d3dx8.h"
+#include "../../dx8sdk/include/d3dx8.h"
 
 #define MAX_TEXTURES 100
 

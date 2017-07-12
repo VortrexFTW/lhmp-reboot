@@ -8,16 +8,16 @@
 
 typedef void(*callback)(char*);
 
-#include <RakPeerInterface.h>
-#include <MessageIdentifiers.h>
-#include <BitStream.h>
-#include <RakNetTypes.h>
-#include <RakSleep.h>
-#include <TCPInterface.h>
+#include "../../RakNet/RakPeerInterface.h"
+#include "../../RakNet/MessageIdentifiers.h"
+#include "../../RakNet/BitStream.h"
+#include "../../RakNet/RakNetTypes.h"
+#include "../../RakNet/RakSleep.h"
+#include "../../RakNet/TCPInterface.h"
 #include <iostream>
 #include "../../shared/include/structures.h"
 
-#include <FileListTransfer.h>
+#include  "../../RakNet/FileListTransfer.h"
 
 struct sHttpRequest
 {
