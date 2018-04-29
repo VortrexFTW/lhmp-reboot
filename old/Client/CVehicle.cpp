@@ -401,6 +401,21 @@ void CVehicle::ToggleEngine(byte state)
 	g_CCore->GetLog()->AddLog(buff);
 }
 
+void CVehicle::ToggleLights(bool state)
+{
+	if (this->GetEntity() != NULL)
+	{
+		//g_CCore->GetGame()->ToggleVehicleEngine(this->GetEntity(), state);
+		g_CCore->GetGame()->CarLights(this->GetEntity(), state);
+	}
+	this->lightState = state;
+
+	char buff[200];
+	sprintf(buff, "Toggle Lights  %b", state);
+	g_CCore->GetLog()->AddLog(buff);
+
+}
+
 byte CVehicle::GetEngineState()
 {
 	return this->engineState;

@@ -86,6 +86,7 @@ public:
 	CCore*				GetCore();
 
 	void				SetDefaultMap(char*);
+	void				SetTrafficEnabled(bool*);
 	char*				GetDefaultMap();
 };
 #endif

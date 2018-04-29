@@ -3736,6 +3736,26 @@ void CGame::SetCarEngineState(DWORD vehicle, bool shouldBeOn)
 	}
 }
 
+void CGame::CarLights(DWORD vehicle, bool lights)
+{
+	DWORD dwLights = lights;
+	//int vehID = g_CCore->GetVehiclePool()->GetVehicleIdByBase(vehicle);
+	//CVehicle* veh = g_CCore->GetVehiclePool()->Return(vehID);
+
+
+
+
+	/*
+	__asm
+	{
+		MOV ECX, vehicle
+		PUSH dwLights
+		MOV EAX, 0x2014
+		CALL EAX
+	}
+	*/
+}
+
 __declspec(noinline) void CGame::SetFrameRot(DWORD frame, float w, float x, float y, float z)
 {
 	Vector4D rot;

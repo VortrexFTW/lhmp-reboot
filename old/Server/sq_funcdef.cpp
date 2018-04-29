@@ -783,6 +783,19 @@ SQInteger sq_serverSetDefaultMap(SQVM *vm)
 	return 1;
 }
 
+SQInteger sq_serverToggleTraffic(SQVM *vm)
+{
+	SQBool traffic;
+	sq_getbool(vm, -1, &traffic);
+	//g_CCore->GetNetworkManager()->m_pServerMode = modename;
+	g_CCore->SetTrafficEnabled((bool*)traffic);
+	BitStream bsOut;
+	bsOut.Write((MessageID)ID_GAME_LHMP_PACKET);
+	bsOut.Write((MessageID)LHMP_TOGGLE_TRAFFIC);
+	bsOut.Write(traffic);
+	g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE, 0, UNASSIGNED_SYSTEM_ADDRESS, true);
+	return 1;
+}
 
 SQInteger sq_playerAddWeapon(SQVM *vm)
 {
@@ -983,6 +996,32 @@ SQInteger sq_vehicleToggleRoof(SQVM *vm)
 		bsOut.Write((MessageID)LHMP_VEHICLE_TOGGLE_ROOF);
 		bsOut.Write(ID);
 		bsOut.Write(state);
+		g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED, 0, UNASSIGNED_SYSTEM_ADDRESS, true);
+		sq_pushbool(vm, true); return 1;
+	}
+	sq_pushbool(vm, false);
+	return 1;
+}
+
+SQInteger sq_vehicleToggleLights(SQVM *vm)
+{
+	SQInteger ID;
+	SQInteger lights;
+
+	sq_getinteger(vm, -2, &ID);
+	sq_getbool(vm, -1, &lights);
+
+	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
+
+
+	if (veh != NULL)
+	{
+		veh->ToggleLights((byte)lights);
+		BitStream bsOut;
+		bsOut.Write((MessageID)ID_GAME_LHMP_PACKET);
+		bsOut.Write((MessageID)LHMP_VEHICLE_TOGGLE_LIGHTS);
+		bsOut.Write(ID);
+		bsOut.Write(lights);
 		g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED, 0, UNASSIGNED_SYSTEM_ADDRESS, true);
 		sq_pushbool(vm, true); return 1;
 	}

@@ -36,6 +36,7 @@ private:
 	bool			onGas;	// is accelerating
 	byte            roofState;
 	byte            engineState;
+	bool			lightState;
 
 	DWORD			explodedCar;
 
@@ -99,6 +100,8 @@ public:
 
 	void        ToggleEngine(byte);
 	byte        GetEngineState();
+
+	void        ToggleLights(bool);
 
 	bool		IsOnGas();
 	void		SetIsOnGas(bool);

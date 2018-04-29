@@ -912,6 +912,25 @@ void CGameSync::onVehicleEngineStateChange(RakNet::BitStream* bitInput)
 	}
 }
 
+void CGameSync::onVehicleLightStateChange(RakNet::BitStream* bitInput)
+{
+	int ID;
+	bool state;
+
+	bitInput->Read(ID);
+	bitInput->Read(state);
+
+	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
+
+	if (veh && g_CCore->GetLocalPlayer()->GetOurID() != veh->GetSeat(0))
+	{
+		veh->ToggleLights(state);
+		char buff[255];
+		sprintf(buff, "[Nm] TOGGLE ENGINE %d STATE: %d", ID, state);
+		g_CCore->GetLog()->AddLog(buff);
+	}
+}
+
 
 void CGameSync::onVehicleRoofIsChanged(RakNet::BitStream* bitInput)
 {
@@ -1256,6 +1275,18 @@ void CGameSync::onMapChange(RakNet::BitStream* bitInput)
 
 }
 
+void CGameSync::onTrafficStateChange(RakNet::BitStream* bitInput)
+{
+	bool traffic;
+	bitInput->Read(traffic);
+
+	g_CCore->GetGame()->SetTrafficVisible(traffic);
+	char buff[250];
+	sprintf(buff, "[Nm] SET traffic %b", traffic);
+	g_CCore->GetLog()->AddLog(buff);
+
+}
+
 void CGameSync::onPickupIsCreated(RakNet::BitStream* bitInput)
 {
 	g_CCore->GetLog()->AddLog("[NM] Pickup create");
@@ -1435,6 +1466,9 @@ void CGameSync::HandlePacket(RakNet::Packet* packet, RakNet::TimeMS timestamp)
 	case LHMP_VEHICLE_TOGGLE_ENGINE:
 		this->onVehicleEngineStateChange(&bsIn);
 		break;
+	case LHMP_VEHICLE_TOGGLE_LIGHTS:
+		this->onVehicleLightStateChange(&bsIn);
+		break;
 	case LHMP_VEHICLE_TOGGLE_ROOF:
 		this->onVehicleRoofIsChanged(&bsIn);
 		break;
@@ -1488,6 +1522,9 @@ void CGameSync::HandlePacket(RakNet::Packet* packet, RakNet::TimeMS timestamp)
 		break;
 	case LHMP_SCRIPT_CHANGE_MAP:
 		this->onMapChange(&bsIn);
+		break;
+	case LHMP_TOGGLE_TRAFFIC:
+		this->onTrafficStateChange(&bsIn);
 		break;
 
 		/*ok, not sure*/

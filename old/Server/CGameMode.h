@@ -38,6 +38,7 @@ public:
 	void SendClientScripts(RakNet::SystemAddress client);
 private:
 	char pGamemodeName[250];
+	bool pTrafficEnabled;
 	ClientScript* clientPool;
 	int clientPoolSize;
 
@@ -46,6 +47,8 @@ private:
 
 	// Sets gamemode name attribute (visible in Server Query process)
 	void	SetName(char* name);
+
+	void	SetTrafficEnabled(bool* trafficEnabled);
 };
 
 #endif

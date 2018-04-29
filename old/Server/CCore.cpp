@@ -161,6 +161,11 @@ CPickupPool*			CCore::GetPickupPool()
 	return &m_cPickupPool;
 }
 
+void	CCore::SetTrafficEnabled(bool* trafficEnabled)
+{
+	this->m_ctrafficEnabled = trafficEnabled;
+}
+
 void	CCore::SetDefaultMap(char* map)
 {
 	sprintf(m_cMapName, map);
