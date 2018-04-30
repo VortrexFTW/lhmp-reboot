@@ -146,6 +146,7 @@ public:
 
 	static void ToggleVehicleEngine(DWORD vehicle, BYTE state);
 	static void ToggleVehicleRoof(DWORD, BYTE);
+	static void ToggleVehicleLights(DWORD, BYTE);
 	static void SetCarPosition(DWORD, Vector3D);
 	static void SetCarRotation(DWORD, Vector3D);
 	static void CarUpdate(DWORD, Vector3D, Vector3D);
@@ -160,7 +161,6 @@ public:
 	static void ExplodeCar(DWORD);
 	static void LockCarDoor(DWORD, int, bool);
 	static void SetCarEngineState(DWORD, bool);
-	static void CarLights(DWORD, bool);
 	// else
 	static byte IsTabMapEnabled();
 	static void PlayGameSound(char[]);

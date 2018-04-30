@@ -74,6 +74,8 @@ public:
 	void        ToggleRoof(byte);
 	byte        GetRoofState();
 
+	byte        GetLightState();
+
 	void        ToggleLights(bool);
 
 	void        ToggleEngine(byte);

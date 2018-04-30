@@ -829,7 +829,7 @@ void CGame::AfterRespawn()
 				veh->ToggleRoof(veh->GetRoofState());
 				veh->SetSirenState(veh->GetSirenState());
 				veh->ToggleEngine(veh->GetEngineState());
-
+				veh->ToggleLights(veh->GetLightsState());
 			}
 		}
 	}
@@ -3720,7 +3720,6 @@ void CGame::LockCarDoor(DWORD car, int seat, bool status)
 	}
 }
 
-
 void CGame::SetCarEngineState(DWORD vehicle, bool shouldBeOn)
 {
 	g_CCore->GetLog()->AddLog("SetCarEngineState");
@@ -3734,26 +3733,6 @@ void CGame::SetCarEngineState(DWORD vehicle, bool shouldBeOn)
 		MOV EAX, 0x00538220
 		CALL EAX;  engine func
 	}
-}
-
-void CGame::CarLights(DWORD vehicle, bool lights)
-{
-	DWORD dwLights = lights;
-	//int vehID = g_CCore->GetVehiclePool()->GetVehicleIdByBase(vehicle);
-	//CVehicle* veh = g_CCore->GetVehiclePool()->Return(vehID);
-
-
-
-
-	/*
-	__asm
-	{
-		MOV ECX, vehicle
-		PUSH dwLights
-		MOV EAX, 0x2014
-		CALL EAX
-	}
-	*/
 }
 
 __declspec(noinline) void CGame::SetFrameRot(DWORD frame, float w, float x, float y, float z)

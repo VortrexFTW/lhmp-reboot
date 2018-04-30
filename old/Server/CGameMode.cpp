@@ -204,9 +204,16 @@ char*	CGameMode::GetName()
 	return this->pGamemodeName;
 }
 
-void	CGameMode::SetTrafficEnabled(bool* traffic)
+bool	CGameMode::GetTrafficEnabled()
 {
-	this->pTrafficEnabled = traffic;
+	bool trafficEnabled = this->pTrafficEnabled;
+	return trafficEnabled;
+}
+
+void * CGameMode::SetTrafficEnabled(bool trafficEnabled)
+{
+	this->pTrafficEnabled = trafficEnabled;
+	return nullptr;
 }
 
 void compile_error_handler(HSQUIRRELVM v, const SQChar* desc, const SQChar* source, SQInteger line, SQInteger column)

@@ -189,6 +189,27 @@ SQInteger sq_playerConsoleAddText(SQVM *vm)
 	return 1;
 }
 
+SQInteger sq_doorSetState(SQVM *vm)
+{
+	const SQChar* doorName;
+	SQInteger state;
+	SQInteger facing;
+
+	sq_getstring(vm, -3, &doorName);
+	sq_getinteger(vm, -2, &state);
+	sq_getinteger(vm, -1, &facing);
+
+	BitStream bsOut;
+	bsOut.Write((MessageID)ID_GAME_LHMP_PACKET);
+	bsOut.Write((MessageID)LHMP_DOOR_SET_STATE);
+	bsOut.Write(doorName);
+	bsOut.Write(state);
+	bsOut.Write(facing);
+	g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED, 0, UNASSIGNED_SYSTEM_ADDRESS, false);
+
+	return 1;
+}
+
 SQInteger sq_playerLockControls(SQVM *vm)
 {
 	SQInteger ID;
@@ -785,8 +806,8 @@ SQInteger sq_serverSetDefaultMap(SQVM *vm)
 
 SQInteger sq_serverToggleTraffic(SQVM *vm)
 {
-	SQBool traffic;
-	sq_getbool(vm, -1, &traffic);
+	SQInteger traffic;
+	sq_getinteger(vm, -1, &traffic);
 	//g_CCore->GetNetworkManager()->m_pServerMode = modename;
 	g_CCore->SetTrafficEnabled((bool*)traffic);
 	BitStream bsOut;
@@ -1006,22 +1027,48 @@ SQInteger sq_vehicleToggleRoof(SQVM *vm)
 SQInteger sq_vehicleToggleLights(SQVM *vm)
 {
 	SQInteger ID;
-	SQInteger lights;
+	SQInteger state;
 
 	sq_getinteger(vm, -2, &ID);
-	sq_getbool(vm, -1, &lights);
+	sq_getinteger(vm, -1, &state);
 
 	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
 
 
 	if (veh != NULL)
 	{
-		veh->ToggleLights((byte)lights);
+		veh->ToggleLights(state);
 		BitStream bsOut;
 		bsOut.Write((MessageID)ID_GAME_LHMP_PACKET);
 		bsOut.Write((MessageID)LHMP_VEHICLE_TOGGLE_LIGHTS);
 		bsOut.Write(ID);
-		bsOut.Write(lights);
+		bsOut.Write(state);
+		g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED, 0, UNASSIGNED_SYSTEM_ADDRESS, true);
+		sq_pushbool(vm, true); return 1;
+	}
+	sq_pushbool(vm, false);
+	return 1;
+}
+
+SQInteger sq_vehicleToggleEngine(SQVM *vm)
+{
+	SQInteger ID;
+	SQInteger state;
+
+	sq_getinteger(vm, -2, &ID);
+	sq_getinteger(vm, -1, &state);
+
+	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
+
+
+	if (veh != NULL)
+	{
+		veh->ToggleEngine(state);
+		BitStream bsOut;
+		bsOut.Write((MessageID)ID_GAME_LHMP_PACKET);
+		bsOut.Write((MessageID)LHMP_VEHICLE_TOGGLE_ENGINE);
+		bsOut.Write(ID);
+		bsOut.Write(state);
 		g_CCore->GetNetworkManager()->GetPeer()->Send(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED, 0, UNASSIGNED_SYSTEM_ADDRESS, true);
 		sq_pushbool(vm, true); return 1;
 	}
@@ -1032,10 +1079,10 @@ SQInteger sq_vehicleToggleLights(SQVM *vm)
 SQInteger sq_vehicleToggleSiren(SQVM *vm)
 {
 	SQInteger ID;
-	SQBool state;
+	SQInteger state;
 
 	sq_getinteger(vm, -2, &ID);
-	sq_getbool(vm, -1, &state);
+	sq_getinteger(vm, -1, &state);
 
 	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
 
@@ -1083,6 +1130,23 @@ SQInteger sq_vehicleGetRoofState(SQVM *vm)
 	if (vehicle != NULL)
 	{
 		bool state = (vehicle->GetRoofState() == 1);
+		sq_pushbool(vm, !state);
+		return 1;
+	}
+	sq_pushnull(vm);
+	return 1;
+}
+
+SQInteger sq_vehicleGetLightState(SQVM *vm)
+{
+	SQInteger ID;
+	sq_getinteger(vm, -1, &ID);
+
+	CVehicle* vehicle = g_CCore->GetVehiclePool()->Return(ID);
+
+	if (vehicle != NULL)
+	{
+		bool state = (vehicle->GetLightState() == 1);
 		sq_pushbool(vm, !state);
 		return 1;
 	}

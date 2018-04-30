@@ -67,10 +67,16 @@ SQInteger sq_vehicleSetFuel(SQVM *vm);
 SQInteger sq_vehicleGetFuel(SQVM *vm);
 SQInteger sq_vehicleToggleRoof(SQVM *vm);
 SQInteger sq_vehicleGetRoofState(SQVM *vm);
+SQInteger sq_vehicleGetLightState(SQVM *vm);
+SQInteger sq_vehicleToggleLights(SQVM *vm);
+SQInteger sq_vehicleToggleEngine(SQVM *vm);
+
 SQInteger sq_vehicleToggleSiren(SQVM *vm);
 SQInteger sq_vehicleGetSirenState(SQVM *vm);
 SQInteger sq_vehicleExplode(SQVM *vm);
 SQInteger sq_vehicleExists(SQVM *vm);
+
+SQInteger sq_doorSetState(SQVM *vm);
 
 SQInteger sq_isAnyPlayerInVehicle(SQVM *vm);
 SQInteger sq_getDistanceBetween3DPoints(SQVM *vm);
@@ -82,6 +88,8 @@ SQInteger sq_serverSetGamemodeName(SQVM *vm);
 SQInteger sq_serverGetOnlinePlayers(SQVM *vm);
 SQInteger sq_serverGetMaxPlayers(SQVM *vm);
 SQInteger sq_serverSetDefaultMap(SQVM *vm);
+
+SQInteger sq_serverToggleTraffic(SQVM *vm);
 
 
 SQInteger sq_timerCreate(SQVM *vm);

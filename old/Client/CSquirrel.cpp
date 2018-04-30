@@ -890,6 +890,15 @@ SQInteger sq_getRotation(SQVM *vm) {
 	return 1;
 }
 
+SQInteger sq_getHeading(SQVM *vm) {
+	Vector3D pos = g_CCore->GetLocalPlayer()->GetLocalRot();
+	unsigned short shortRot = (unsigned short)(Tools::RotationTo360(pos.x, pos.z)*MAX_USHORT / 360);
+	sq_pushfloat(vm, shortRot);
+	return 1;
+}
+
+//
+
 SQInteger sq_getDistanceBetween3DPoints(SQVM *vm) {
 	Vector3D pointA, pointB;
 	sq_getfloat(vm, -6, &pointA.x);
@@ -1316,8 +1325,7 @@ void CSquirrel::PrepareMachine(SQVM* pVM)
 	RegisterVariable(pVM, "VK_Y", (int)0x59);
 	RegisterVariable(pVM, "VK_Z", (int)0x5A);
 
-	// functions
-
+	// Functions
 	RegisterFunction(pVM, "timerOff", (SQFUNCTION)sq_TimerOff, 1, ".");
 
 	RegisterFunction(pVM, "timerOn", (SQFUNCTION)sq_TimerOn, 5, ".nnnn");
@@ -1366,6 +1374,9 @@ void CSquirrel::PrepareMachine(SQVM* pVM)
 
 	// Get localplayer rotation
 	RegisterFunction(pVM, "getRotation", (SQFUNCTION)sq_getRotation, 1, ".");
+
+	// Get localplayer rotation as single float
+	RegisterFunction(pVM, "getHeading", (SQFUNCTION)sq_getHeading, 1, ".");
 
 	// Play anim
 	RegisterFunction(pVM, "playAnimation", (SQFUNCTION)sq_playAnimation, 2, ".n");

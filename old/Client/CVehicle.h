@@ -100,6 +100,8 @@ public:
 
 	void        ToggleEngine(byte);
 	byte        GetEngineState();
+	
+	byte        GetLightsState();
 
 	void        ToggleLights(bool);
 

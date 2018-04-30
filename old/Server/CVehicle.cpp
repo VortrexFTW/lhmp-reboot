@@ -46,6 +46,11 @@ byte CVehicle::GetRoofState()
 	return this->roofState;
 }
 
+byte CVehicle::GetLightState()
+{
+	return this->lightState;
+}
+
 void CVehicle::ToggleEngine(byte state)
 {
 	this->engineState = state;

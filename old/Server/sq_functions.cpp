@@ -44,7 +44,7 @@ int Init(SQVM* vM)
 	RegisterFunction(vM, "playerPlaySound", (SQFUNCTION)sq_playerPlaySound, 3, ".ns");
 	RegisterFunction(vM, "allPlaySound", (SQFUNCTION)sq_allPlaySound, 2, ".s");
 	RegisterFunction(vM, "playerToggleCityMusic", (SQFUNCTION)sq_playerToggleCityMusic, 3, ".nn");
-	RegisterFunction(vM, "playerLockControls", (SQFUNCTION)sq_playerLockControls, 3, ".nb");
+	RegisterFunction(vM, "playerLockControls", (SQFUNCTION)sq_playerLockControls, 3, ".nn");
 	RegisterFunction(vM, "playerIsLocked", (SQFUNCTION)sq_playerIsLocked, 2, ".n");
 	RegisterFunction(vM, "playerToggleCityMusic", (SQFUNCTION)sq_playerToggleCityMusic, 3, ".nn");
 	RegisterFunction(vM, "playerSetNickColor", (SQFUNCTION)sq_playerSetNickColor, 3, ".nn");
@@ -62,23 +62,28 @@ int Init(SQVM* vM)
 	RegisterFunction(vM, "playerClearObjective", (SQFUNCTION)sq_playerClearObjective, 2, ".n");
 	RegisterFunction(vM, "playerAddConsoleText", (SQFUNCTION)sq_playerConsoleAddText, 4, ".nss");
 
+	RegisterFunction(vM, "doorSetState", (SQFUNCTION)sq_doorSetState, 4, ".sii");
+
 	RegisterFunction(vM, "vehicleSpawn", (SQFUNCTION)sq_vehicleSpawn, 8, ".nffffff");
 	RegisterFunction(vM, "vehicleDelete", (SQFUNCTION)sq_vehicleDelete, 2, ".n");
 	RegisterFunction(vM, "vehicleGetDriverID", (SQFUNCTION)sq_vehicleGetDriverID, 2, ".n");
 	RegisterFunction(vM, "vehicleGetPlayerIDFromSeat", (SQFUNCTION)sq_vehicleGetPlayerIDFromSeat, 3, ".nn");
 	RegisterFunction(vM, "vehicleGetPosition", (SQFUNCTION)sq_vehicleGetPosition, 2, ".n");
-	RegisterFunction(vM, "vehicleGetDamage", (SQFUNCTION)sq_vehicleGetDamage, 2, ".n");
+	RegisterFunction(vM, "vehicleGetHealth", (SQFUNCTION)sq_vehicleGetDamage, 2, ".n");
 	RegisterFunction(vM, "vehicleGetRotation", (SQFUNCTION)sq_vehicleGetRotation, 2, ".n");
 	RegisterFunction(vM, "vehicleSetPosition", (SQFUNCTION)sq_vehicleSetPosition, 5, ".nfff");
 	RegisterFunction(vM, "vehicleSetFuel", (SQFUNCTION)sq_vehicleSetFuel, 3, ".nf");
 	RegisterFunction(vM, "vehicleGetFuel", (SQFUNCTION)sq_vehicleGetFuel, 2, ".n");
 	RegisterFunction(vM, "vehicleSetSpeed", (SQFUNCTION)sq_vehicleSetSpeed, 3, ".nf");
-	RegisterFunction(vM, "vehicleSetDamage", (SQFUNCTION)sq_vehicleSetDamage, 3, ".nf");
+	RegisterFunction(vM, "vehicleSetHealth", (SQFUNCTION)sq_vehicleSetDamage, 3, ".nf");
 	RegisterFunction(vM, "vehicleSetRotation", (SQFUNCTION)sq_vehicleSetRotation, 5, ".nfff");
 	RegisterFunction(vM, "vehicleToggleRoof", (SQFUNCTION)sq_vehicleToggleRoof, 3, ".nn");
-	RegisterFunction(vM, "vehicleToggleSiren", (SQFUNCTION)sq_vehicleToggleSiren, 3, ".nb");
+	RegisterFunction(vM, "vehicleToggleSiren", (SQFUNCTION)sq_vehicleToggleSiren, 3, ".nn");
+	RegisterFunction(vM, "vehicleToggleLights", (SQFUNCTION)sq_vehicleToggleLights, 3, ".nn");
+	RegisterFunction(vM, "vehicleToggleEngine", (SQFUNCTION)sq_vehicleToggleEngine, 3, ".nn");
 	RegisterFunction(vM, "vehicleGetSirenState", (SQFUNCTION)sq_vehicleGetSirenState, 2, ".n");
 	RegisterFunction(vM, "vehicleGetRoofState", (SQFUNCTION)sq_vehicleGetRoofState, 2, ".n");
+	RegisterFunction(vM, "vehicleGetLightState", (SQFUNCTION)sq_vehicleGetLightState, 2, ".n");
 	RegisterFunction(vM, "vehicleExplode", (SQFUNCTION)sq_vehicleExplode, 2, ".n");
 	RegisterFunction(vM, "vehicleExists", (SQFUNCTION)sq_vehicleExists, 2, ".n");
 
@@ -116,6 +121,8 @@ int Init(SQVM* vM)
 
 	RegisterFunction(vM, "callClientFunc", (SQFUNCTION)sq_callClientFunc, 5, ".nss.");
 	RegisterFunction(vM, "callFunc", (SQFUNCTION)sq_callFunc, 4, ".ss.");
+
+	RegisterFunction(vM, "setTrafficEnabled", (SQFUNCTION)sq_serverToggleTraffic, 2, ".n");
 	
 	// part of human body
 	RegisterVariable(vM, "PLAYER_RIGHHAND", 1);

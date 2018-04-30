@@ -163,7 +163,7 @@ CPickupPool*			CCore::GetPickupPool()
 
 void	CCore::SetTrafficEnabled(bool* trafficEnabled)
 {
-	this->m_ctrafficEnabled = trafficEnabled;
+	this->GetGameMode()->SetTrafficEnabled(trafficEnabled);
 }
 
 void	CCore::SetDefaultMap(char* map)

@@ -27,6 +27,9 @@ public:
 	// Returns the name of currently running gamemode
 	char*	GetName();
 
+	bool	GetTrafficEnabled();
+	void*	SetTrafficEnabled(bool trafficEnabled);
+
 	// TODO: eventually not used 
 	// Returns  0 - OK
 	//			1 - failed to compile
@@ -47,8 +50,6 @@ private:
 
 	// Sets gamemode name attribute (visible in Server Query process)
 	void	SetName(char* name);
-
-	void	SetTrafficEnabled(bool* trafficEnabled);
 };
 
 #endif

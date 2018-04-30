@@ -136,7 +136,7 @@ void CGameSync::Engine_onPlayerThrowGranade(Vector3D position)
 	bsOut.Write(position);
 	g_CCore->GetNetwork()->SendServerMessage(&bsOut, IMMEDIATE_PRIORITY, RELIABLE_ORDERED);
 }
-// When local player throws a granade/molotov
+// When a door opens and closes
 void CGameSync::Engine_onDoorStateChange(char* doorName, int state, bool facing)
 {
 	RakNet::BitStream bsOut;
@@ -907,7 +907,7 @@ void CGameSync::onVehicleEngineStateChange(RakNet::BitStream* bitInput)
 	{
 		veh->ToggleEngine(state);
 		char buff[255];
-		sprintf(buff, "[Nm] TOGGLE ENGINE %d STATE: %d", ID, state);
+		sprintf(buff, "[Nm] TOGGLE ENGINE %d STATE: %d", ID, (int)state);
 		g_CCore->GetLog()->AddLog(buff);
 	}
 }
@@ -915,20 +915,21 @@ void CGameSync::onVehicleEngineStateChange(RakNet::BitStream* bitInput)
 void CGameSync::onVehicleLightStateChange(RakNet::BitStream* bitInput)
 {
 	int ID;
-	bool state;
+	int state;
 
 	bitInput->Read(ID);
 	bitInput->Read(state);
 
 	CVehicle* veh = g_CCore->GetVehiclePool()->Return(ID);
 
-	if (veh && g_CCore->GetLocalPlayer()->GetOurID() != veh->GetSeat(0))
+	if (veh != NULL)
 	{
 		veh->ToggleLights(state);
-		char buff[255];
-		sprintf(buff, "[Nm] TOGGLE ENGINE %d STATE: %d", ID, state);
-		g_CCore->GetLog()->AddLog(buff);
 	}
+
+	char buff[255];
+	sprintf(buff, "[Nm] TOGGLE LIGHTS %d STATE: %d", ID, state);
+	g_CCore->GetLog()->AddLog(buff);
 }
 
 
@@ -1277,12 +1278,12 @@ void CGameSync::onMapChange(RakNet::BitStream* bitInput)
 
 void CGameSync::onTrafficStateChange(RakNet::BitStream* bitInput)
 {
-	bool traffic;
+	int traffic;
 	bitInput->Read(traffic);
 
-	g_CCore->GetGame()->SetTrafficVisible(traffic);
+	g_CCore->GetGame()->SetTrafficVisible((bool)traffic);
 	char buff[250];
-	sprintf(buff, "[Nm] SET traffic %b", traffic);
+	sprintf(buff, "[Nm] SET traffic %d", traffic);
 	g_CCore->GetLog()->AddLog(buff);
 
 }

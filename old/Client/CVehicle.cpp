@@ -306,6 +306,8 @@ void CVehicle::SendSync()
 		onGas = (veh->gasState == 1.0f);
 		//this->onGas = (*(float*)(this->GetEntity() + 0x490) == 1.0f);
 
+		bool lights = (veh->bLights);
+
 		this->SetRotation(rot);
 		this->previous = pos;
 		this->actual = pos;
@@ -391,8 +393,8 @@ void CVehicle::ToggleEngine(byte state)
 {
 	if (this->GetEntity() != NULL)
 	{
-		//g_CCore->GetGame()->ToggleVehicleEngine(this->GetEntity(), state);
-		g_CCore->GetGame()->SetCarEngineState(this->GetEntity(), (state == 1));
+		g_CCore->GetGame()->ToggleVehicleEngine(this->GetEntity(), state);
+		g_CCore->GetGame()->SetCarEngineState(this->GetEntity(), state);
 	}
 	this->engineState = state;
 
@@ -405,13 +407,13 @@ void CVehicle::ToggleLights(bool state)
 {
 	if (this->GetEntity() != NULL)
 	{
-		//g_CCore->GetGame()->ToggleVehicleEngine(this->GetEntity(), state);
-		g_CCore->GetGame()->CarLights(this->GetEntity(), state);
+		*(byte*)(this->GetEntity() + 0x2014) = state;
 	}
-	this->lightState = state;
+
+	this->lightState = (bool)state;
 
 	char buff[200];
-	sprintf(buff, "Toggle Lights  %b", state);
+	sprintf(buff, "Toggle Lights  %d", state);
 	g_CCore->GetLog()->AddLog(buff);
 
 }
@@ -419,6 +421,11 @@ void CVehicle::ToggleLights(bool state)
 byte CVehicle::GetEngineState()
 {
 	return this->engineState;
+}
+
+byte CVehicle::GetLightsState()
+{
+	return this->lightState;
 }
 
 
